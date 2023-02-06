@@ -1,5 +1,7 @@
-let btnBurger = document.querySelector('#btn-burger');
+let btnBurger = document.getElementById('btn-burger');
 let asideContainer = document.querySelector('#aside-container');
+let btnBurgerSpan = document.querySelectorAll('#btn-burger span');
+
 console.log(btnBurger);
 
 btnBurger.addEventListener("click", () =>{
