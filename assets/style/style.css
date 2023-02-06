@@ -20,7 +20,6 @@ body {
 	text-transform: uppercase;
 	letter-spacing: 2px;
 }
-
 /* ************************************* */
 /* *            Bouton Burger          * */
 /* ************************************* */
@@ -61,7 +60,6 @@ body {
 	background-color: white;
 	transform: translate(0px, -9px) rotate(-40deg) scale(1.5)
 }
-
 /* ************************************* */
 /* *                Aside              * */
 /* ************************************* */
@@ -98,7 +96,7 @@ body {
 	font-size: 1.3em;
 	font-weight: bold;
 	text-decoration: none;
-	letter-spacing: 5px;
+	letter-spacing: 8px;
 }
 #aside-container #aside-menu .aside-item::before {
 	content: "";
