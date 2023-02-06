@@ -1,0 +1,123 @@
+*,
+::before,
+::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+/* ************************************* */
+/* *               Génériques          * */
+/* ************************************* */
+body {
+	width: 100%;
+	padding: 0.5em;
+}
+.copyright{
+    font-size: .6em;
+    color: white;
+    font-family: cursive;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* ************************************* */
+/* *            Bouton Burger          * */
+/* ************************************* */
+#btn-burger {
+	z-index: 999;
+	display: block;
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 40px;
+	height: 40px;
+	padding: 1px;
+	border-radius: 50%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+#btn-burger span {
+	width: 100%;
+	height: 3px;
+	border-radius: 5px;
+	background-color: black;
+	transition: 0.3s all;
+}
+#btn-buger.active {
+	color: white;
+}
+#btn-burger.active span {
+}
+
+/* ************************************* */
+/* *                Aside              * */
+/* ************************************* */
+#aside-container {
+	z-index: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100%;
+	background-color: black;
+	transform: translateX(-500px);
+	transition: 0.4s all;
+}
+#aside-container.active {
+	transform: translateX(0px);
+	transition: 0.4s all;
+}
+#aside-container #aside-menu {
+	height: 100%;
+	width: 100%;
+	padding: 1em;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: space-around;
+}
+#aside-container #aside-menu .aside-item {
+	list-style-type: none;
+	width: 100%;
+	text-align: right;
+}
+#aside-container #aside-menu .aside-item a {
+	color: white;
+	font-size: 1.3em;
+	font-weight: bold;
+	text-decoration: none;
+	letter-spacing: 5px;
+}
+#aside-container #aside-menu .aside-item::before {
+	content: "";
+	position: relative;
+    top: 0;
+    left: 0;
+	width: 0%;
+	height: .4em;
+	background-color: bisque;
+    transition: .5s all ease
+}
+#aside-container #aside-menu .aside-item::before:hover {
+    height: 100%;
+    z-index: -1;
+}
+
+#footer {
+	display: none;
+	width: 100%;
+}
+
+/* TODO ZONE MEDIA QUERIES */
+@media screen and (min-width: 480px) {
+}
+@media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 1024px) {
+}
+@media screen and (min-width: 1200px) {
+}
