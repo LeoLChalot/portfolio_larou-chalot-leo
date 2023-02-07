@@ -64,6 +64,7 @@ body {
 /* *                Aside              * */
 /* ************************************* */
 #aside-container {
+	z-index: 2;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -137,9 +138,8 @@ body {
 	align-items: flex-end;
 }
 #home-logo p{
-	/* position: absolute;
-	bottom: 5px; */
-	transform:rotate(-90deg) translateX(65px) translateY(-120px) scale(.5);
+	z-index: 0;
+	transform:rotate(-90deg) translateX(100px) translateY(-120px) scale(.8);
 }
 
 #footer {
