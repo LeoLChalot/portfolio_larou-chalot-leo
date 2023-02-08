@@ -303,7 +303,7 @@ p::first-letter{
 #bts-container section h2 {
 	text-transform: uppercase;
 	letter-spacing: 6px;
-	font-size: 3em;
+	font-size: 2em;
 	position: relative;
 }
 #bts-container section h2::before {
@@ -350,7 +350,6 @@ list-style-type: none;
 }
 #bts-slam ul li a:hover{
 	color: #8c1627;
-
 }
 #bts-description p,
 #bts-cybersecurite p {
