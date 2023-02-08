@@ -13,6 +13,25 @@ body {
 	width: 100%;
 	background-color: black;
 }
+main{
+	padding: 15px;
+}
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span{
+	color: white;
+	display: inline-block;
+}
+
+.first-letter::first-letter{
+	color: red;
+}
 .copyright {
 	font-size: 0.6em;
 	color: white;
@@ -139,13 +158,14 @@ body {
 }
 #home-logo p{
 	z-index: 0;
-	transform:rotate(-90deg) translateX(100px) translateY(-100px) scale(.8);
+	transform:rotate(-90deg) translateX(100px) translateY(-115px) scale(.8);
+	transition: 1s all ease;
+}
+#home-logo .coryright.active{
+	z-index: 3;
+	transform:rotate(0deg) translateX(0px) translateY(0px) scale(1);
 }
 
-#footer {
-	display: none;
-	width: 100%;
-}
 
 /* TODO ZONE MEDIA QUERIES */
 @media screen and (min-width: 480px) {
