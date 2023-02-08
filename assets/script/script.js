@@ -11,3 +11,4 @@ btnBurger.addEventListener("click", () =>{
   copyright.classList.toggle("active");
   console.log(copyright);
 });
+
