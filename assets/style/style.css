@@ -163,7 +163,7 @@ span{
 }
 #home-logo .copyright.active{
 	z-index: 3;
-	transform:rotate(0deg) translateX(0px) translateY(0px) scale(1);
+	transform:rotate(0deg) translateX(0px) translateY(-50px) scale(1);
 }
 
 
