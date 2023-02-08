@@ -63,6 +63,29 @@ h1{
 	color: #E5E5C4;
 	font-weight: bold;
 }
+.scroll-down{
+	position: relative;
+	top: -60px;
+}
+.chevron-down{
+	display: block;
+	text-align: center;
+	transform: rotate(-90deg);
+	font-size: 2em;
+	color: #8C1627;
+	animation: updown 2s infinite;
+}
+@keyframes updown{
+	0%{
+		transform: translate(0, 0);
+	}
+	50%{
+		transform: translate(0, 10px);
+	}
+	100%{
+		transform: translate(0, 0);
+	}
+}
 /* ************************************* */
 /* *            Bouton Burger          * */
 /* ************************************* */
@@ -203,29 +226,6 @@ h1{
 	display: flex;
 	flex-direction: column;
 }
-#bts-container .scroll-down{
-	position: relative;
-	top: -60px;
-}
-#bts-container .chevron-down{
-	display: block;
-	text-align: center;
-	transform: rotate(-90deg);
-	font-size: 2em;
-	color: #8C1627;
-	animation: updown 2s infinite;
-}
-@keyframes updown{
-	0%{
-		transform: translate(0, 0);
-	}
-	50%{
-		transform: translate(0, 10px);
-	}
-	100%{
-		transform: translate(0, 0);
-	}
-}
 #bts-container section{
 	width: 100%;
 	height: 100vh;
@@ -274,6 +274,47 @@ h1{
 	text-align: justify;
 	line-height: 2em;
 }
+/* ************************************* */
+/* *            	  Profil             * */
+/* ************************************* */
+#profil-container{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+#profil-container #profil-photo{
+	width: 100%;
+	height: 100vh;
+	border-radius: 15px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+#profil-container #profil-photo img{
+	width: 100%;
+}
+#profil-container #profil-info{
+	display: flex;
+	justify-content: center;
+}
+#profil-container #profil-info ul li{
+	line-height: 3em;
+	color: #E5E5C4;
+	font-size: 1em;
+	list-style-type: none;
+	text-align: center;
+}
+#btn-cv{
+	width: 100%;
+	display: block;
+	margin: auto;
+	padding: 2em;
+	text-align: center;
+	font-size: 1.7em;
+}
+
 /* ************************************* */
 /* *            	  Footer	           * */
 /* ************************************* */
