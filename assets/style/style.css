@@ -76,7 +76,7 @@ p::first-letter{
 	display: block;
 	text-align: center;
 	transform: rotate(-90deg);
-	font-size: 2em;
+	font-size: 1.7em;
 	color: #8c1627;
 	animation: updown 2s infinite;
 }
@@ -302,6 +302,7 @@ p::first-letter{
 }
 #bts-container section h2 {
 	text-transform: uppercase;
+	margin-top: 2em;
 	letter-spacing: 6px;
 	font-size: 2em;
 	position: relative;
@@ -488,6 +489,9 @@ list-style-type: none;
 	}
 	#bts-container section{
 		width: 60%;
+	}
+	#bts-container section h2{
+		font-size: 3em;
 	}
 	.scroll-down{
 		display: none;
