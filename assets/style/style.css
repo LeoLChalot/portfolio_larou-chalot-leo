@@ -139,7 +139,7 @@ body {
 }
 #home-logo p{
 	z-index: 0;
-	transform:rotate(-90deg) translateX(100px) translateY(-120px) scale(.8);
+	/* transform:rotate(-90deg) translateX(100px) translateY(-120px) scale(.8); */
 }
 
 #footer {
