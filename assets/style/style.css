@@ -159,7 +159,7 @@ span{
 #home-logo .copyright{
 	z-index: 3;
 	transform:rotate(-90deg) translateX(130px) translateY(-115px) scale(.8);
-	transition: 1s all ease;
+	transition: .7s all ease;
 }
 #home-logo .copyright.active{
 	z-index: 3;
