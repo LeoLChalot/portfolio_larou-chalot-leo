@@ -155,16 +155,12 @@ span{
 	display: flex;
 	justify-content: flex-start;
 	align-items: flex-end;
-
 }
 
 
 /* ************************************* */
 /* *            	  Footer	           * */
 /* ************************************* */
-#footer{
-	
-}
 .copyright{
 	z-index: 3;
 	position: absolute;
