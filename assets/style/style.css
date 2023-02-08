@@ -1,10 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
 *,
 ::before,
 ::after {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	font-family: sans-serif;
+	font-family: Ubuntu;
 }
 /* ************************************* */
 /* *               Génériques          * */
@@ -133,7 +134,7 @@ span{
 	z-index: -1;
 }
 /* ************************************* */
-/* *               Content             * */
+/* *            	   Index             * */
 /* ************************************* */
 #main-container{
 	width: 100%;
@@ -154,17 +155,23 @@ span{
 	display: flex;
 	justify-content: flex-start;
 	align-items: flex-end;
-	
+
 }
-#home-logo .copyright{
+
+
+/* ************************************* */
+/* *            	  Footer	           * */
+/* ************************************* */
+.copyright{
 	z-index: 3;
 	position: absolute;
 	bottom: 0;
+	left: 0;
 	transform-origin: 0 0;
 	transform:rotate(-90deg) scale(.8);
 	transition: .3s all ease;
 }
-#home-logo .copyright.active{
+.copyright.active{
 	z-index: 3;
 	transform:rotate(0deg) scale(.8);
 }
