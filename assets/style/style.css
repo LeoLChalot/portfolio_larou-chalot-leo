@@ -35,7 +35,7 @@ span{
 .copyright {
 	font-size: 0.6em;
 	color: white;
-	font-family: cursive;
+	/* font-family: cursive; */
 	text-transform: uppercase;
 	letter-spacing: 2px;
 }
@@ -87,7 +87,7 @@ span{
 	position: absolute;
 	top: 0;
 	left: 0;
-	height: 95vh;
+	height: 100%;
 	width: 100%;
 	background-color: black;
 	transform: translateX(-500px);
@@ -98,8 +98,8 @@ span{
 	transition: 0.4s all;
 }
 #aside-container #aside-menu {
-	height: 100%;
 	width: 100%;
+	height: 100%;
 	padding: 1em;
 	display: flex;
 	flex-direction: column;
@@ -137,7 +137,7 @@ span{
 /* ************************************* */
 #main-container{
 	width: 100%;
-	min-height: 80vh;
+	min-height: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -145,8 +145,7 @@ span{
 }
 #home-logo{
 	width: 100%;
-	width: 100%;
-	height: 95vh;
+	height: 80vh;
 	background-image: url('../img/logo/logo.png');
 	background-position: center;
 	background-repeat: no-repeat;
@@ -155,15 +154,19 @@ span{
 	display: flex;
 	justify-content: flex-start;
 	align-items: flex-end;
+	
 }
 #home-logo .copyright{
 	z-index: 3;
-	transform:rotate(-90deg) translateX(130px) translateY(-115px) scale(.8);
+	position: absolute;
+	bottom: 0;
+	transform-origin: 0 0;
+	transform:rotate(-90deg) scale(.8);
 	transition: .3s all ease;
 }
 #home-logo .copyright.active{
 	z-index: 3;
-	transform:rotate(0deg) translateX(0px) translateY(-50px) scale(1);
+	transform:rotate(0deg) scale(.8);
 }
 
 
