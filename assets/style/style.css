@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
 *,
 ::before,
 ::after {
@@ -12,6 +13,9 @@
 /* ************************************* */
 ::-webkit-scrollbar{
 	width: 0;
+}
+html{
+	scroll-behavior: smooth;
 }
 body {
 	width: 100%;
@@ -37,6 +41,7 @@ h6,
 span{
 	color: white;
 	display: inline-block;
+	text-decoration: none;
 }
 h1{
 	text-align: center;
@@ -51,8 +56,12 @@ h1{
 	letter-spacing: 2px;
 }
 .scroll-down{
-	position:absolute;
-	bottom: 35px;
+	position:relative;
+	top: 0;
+}
+.highlight{
+	color: #E5E5C4;
+	font-weight: bold;
 }
 /* ************************************* */
 /* *            Bouton Burger          * */
@@ -192,7 +201,11 @@ h1{
 /* ************************************* */
 #bts-container{
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
+}
+#bts-container .scroll-down{
+	position: relative;
+	top: -60px;
 }
 #bts-container .chevron-down{
 	display: block;
@@ -213,20 +226,54 @@ h1{
 		transform: translate(0, 0);
 	}
 }
-#bts-description{
-
+#bts-container section{
+	width: 100%;
+	height: 100vh;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+#bts-container section h2{
+	text-transform: uppercase;
+	letter-spacing: 6px;
+}
+#bts-container section h2::before{
+	content: '';
+	color: #8C1627;
+	width: 100%;
+	height: 2px;
+}
+#bts-description ul{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+#bts-container #bts-sisr,
+#bts-container #bts-slam{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
+	gap: 50px;
 }
-#bts-description p{
+#bts-description ul li a,
+#bts-sisr ul li,
+#bts-slam ul li{
+	color: #E5E5C4;
+	list-style-type: none;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 3em;
+}
+#bts-description p,
+#bts-cybersecurite p{
 	text-align: justify;
 	line-height: 2em;
 }
-/* #bts-description span .chevron-bottom{
-	transform: rotate(90deg)
-} */
 /* ************************************* */
 /* *            	  Footer	           * */
 /* ************************************* */
@@ -244,11 +291,13 @@ h1{
 	transform:rotate(0deg) scale(.8);
 }
 
-
 /* TODO ZONE MEDIA QUERIES */
 @media screen and (min-width: 480px) {
 }
 @media screen and (min-width: 768px) {
+	#aside-container{
+		display: none;
+	}
 }
 @media screen and (min-width: 1024px) {
 }
