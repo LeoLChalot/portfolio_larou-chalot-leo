@@ -156,12 +156,12 @@ span{
 	justify-content: flex-start;
 	align-items: flex-end;
 }
-#home-logo p{
-	z-index: 0;
-	transform:rotate(-90deg) translateX(150px) translateY(-115px) scale(.8);
+#home-logo .copyright{
+	z-index: 3;
+	transform:rotate(-90deg) translateX(130px) translateY(-115px) scale(.8);
 	transition: 1s all ease;
 }
-#home-logo .coryright.active{
+#home-logo .copyright.active{
 	z-index: 3;
 	transform:rotate(0deg) translateX(0px) translateY(0px) scale(1);
 }
