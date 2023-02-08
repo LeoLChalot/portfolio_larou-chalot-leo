@@ -10,14 +10,21 @@
 /* ************************************* */
 /* *               Génériques          * */
 /* ************************************* */
+::-webkit-scrollbar{
+	width: 0;
+}
 body {
 	width: 100%;
+	min-height: 100vh;
 	background-color: black;
+	overflow-y: scroll;
 }
 main{
-	padding: 15px;
+	padding: 30px;
 }
-p,
+p{
+	color: white
+}
 a,
 h1,
 h2,
@@ -29,14 +36,15 @@ span{
 	color: white;
 	display: inline-block;
 }
-
+h1{
+	text-align: center;
+}
 .first-letter::first-letter{
 	color: red;
 }
 .copyright {
 	font-size: 0.6em;
 	color: white;
-	/* font-family: cursive; */
 	text-transform: uppercase;
 	letter-spacing: 2px;
 }
@@ -46,7 +54,7 @@ span{
 #btn-burger {
 	z-index: 3;
 	display: block;
-	position: absolute;
+	position: fixed;
 	top: 5px;
 	left: 5px;
 	width: 40px;
@@ -85,14 +93,16 @@ span{
 /* ************************************* */
 #aside-container {
 	z-index: 2;
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	height: 100%;
 	width: 100%;
-	background-color: black;
+	background-color: rgba(0, 0, 0, 0);
+	backdrop-filter: blur(8px);
 	transform: translateX(-500px);
 	transition: 0.4s all;
+
 }
 #aside-container.active {
 	transform: translateX(0px);
@@ -117,6 +127,8 @@ span{
 	font-size: 1.3em;
 	font-weight: bold;
 	text-decoration: none;
+	text-transform: capitalize;
+	letter-spacing: 4px;
 	letter-spacing: 8px;
 }
 #aside-container #aside-menu .aside-item::before {
@@ -136,14 +148,6 @@ span{
 /* ************************************* */
 /* *            	   Index             * */
 /* ************************************* */
-#main-container{
-	width: 100%;
-	min-height: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
 #home-logo{
 	width: 100%;
 	height: 80vh;
@@ -156,14 +160,38 @@ span{
 	justify-content: flex-start;
 	align-items: flex-end;
 }
-
+/* ************************************* */
+/* *            	    AP               * */
+/* ************************************* */
+#projets-wrapper{
+	width: 100%;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+}
+#ap-container .projet{
+	margin-top: 50px;
+	width: 100%;
+	height: 200px;
+	border: 1px solid white;
+	border-radius: 5px;
+	box-shadow: 3px 3px 12px -5px rgba(217, 217, 217, 1);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+/* ************************************* */
+/* *            	   BTS               * */
+/* ************************************* */
 
 /* ************************************* */
 /* *            	  Footer	           * */
 /* ************************************* */
 .copyright{
 	z-index: 3;
-	position: absolute;
+	position: fixed;
 	bottom: 0;
 	left: 0;
 	transform-origin: 0 0;
