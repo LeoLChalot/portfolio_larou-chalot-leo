@@ -23,13 +23,20 @@ body {
 	background-color: black;
 	overflow-y: scroll;
 }
+
 main {
 	padding: 50px 30px;
 	min-height: 80vh;
 }
 p {
-	color: white;
+	color: rgb(218, 218, 218);
 	font-size: 18px;
+}
+p::first-letter{
+	color: rgb(140, 22, 3);
+	font-size: 3em;
+	font-weight: bold;
+	font-family: cursive;
 }
 a,
 h1,
@@ -39,19 +46,16 @@ h4,
 h5,
 h6,
 span {
-	color: white;
+	color: rgb(218, 218, 218);
 	display: inline-block;
 	text-decoration: none;
 }
 h1 {
 	text-align: center;
 }
-.first-letter::first-letter {
-	color: red;
-}
 .copyright {
 	font-size: 0.6em;
-	color: white;
+	color: rgb(218, 218, 218);
 	text-transform: uppercase;
 	letter-spacing: 2px;
 }
@@ -87,6 +91,37 @@ h1 {
 	bottom: 20px;
 	right: 20px;
 	transform: rotate(180deg);
+	transition: .8s all ease;
+}
+.btn-up:hover{
+	background-color: #e5e5c4;
+	color: #8c1627;
+}
+.borderline{
+	position:relative;
+	background-color: black;
+	margin-left: 2px;
+	padding: 4px;
+	line-height: 1em;
+}
+.borderline::before{
+	z-index: -1;
+	content: '';
+	display: block;
+	position: absolute;
+	bottom: -2px;
+	left: -2px;
+	width: 0px;
+	height: 2px;
+	background-color: #8c1627;
+	transition: .6s all ease;
+}
+.borderline:hover::before{
+	content: '';
+	display: block;
+	width: 105%;
+	height: 115%;
+	background-color: #8c1627;
 }
 @keyframes updown {
 	0% {
@@ -123,7 +158,7 @@ h1 {
 	width: 100%;
 	height: 3px;
 	border-radius: 5px;
-	background-color: white;
+	background-color: rgb(218, 218, 218);
 	transition: 0.3s all;
 }
 #btn-burger.active span:nth-child(2) {
@@ -173,27 +208,37 @@ h1 {
 	text-align: right;
 }
 #aside-container #aside-menu .aside-item a {
-	color: white;
+	color: rgb(218, 218, 218);
 	font-size: 1.3em;
 	font-weight: bold;
 	text-decoration: none;
 	text-transform: capitalize;
 	letter-spacing: 4px;
 	letter-spacing: 8px;
+	transition: .3s all ease;
 }
-#aside-container #aside-menu .aside-item::before {
-	content: "";
-	position: relative;
-	top: 0;
-	left: 0;
-	width: 0%;
-	height: 0.4em;
-	background-color: bisque;
-	transition: 0.5s all ease;
+#aside-container #aside-menu .aside-item a::before {
+	content: '';
+	display: block;
+	position: absolute;
+	bottom: -3px;
+	width: 15px;
+	height: 1px;
+	background-color: #8c1627;
+	transition: .4s all ease;
 }
-#aside-container #aside-menu .aside-item::before:hover {
-	height: 100%;
-	z-index: -1;
+#aside-container #aside-menu .aside-item a:hover::before {
+	content: '';
+	display: block;
+	position: absolute;
+	bottom: -3px;
+	width: 97%;
+	height: 2px;
+	background-color: #8c1627;
+}
+#aside-container #aside-menu .aside-item a:hover{
+	color: #8c1627;
+	filter: brightness(1.5);
 }
 /* ************************************* */
 /* *            	   Index             * */
@@ -212,17 +257,23 @@ h1 {
 /* ************************************* */
 /* *            	    AP               * */
 /* ************************************* */
+#ecole-container{
+	padding: 4em;
+	width: 100%;
+}
 #projets-wrapper {
 	width: 100%;
 	padding: 20px;
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
-#ap-container .projet {
+#ecole-container .projet {
 	margin-top: 50px;
 	width: 100%;
 	height: 200px;
-	border: 1px solid white;
+	border: 1px solid rgb(218, 218, 218);
 	border-radius: 5px;
 	box-shadow: 3px 3px 12px -5px rgba(217, 217, 217, 1);
 	display: flex;
@@ -251,19 +302,29 @@ h1 {
 #bts-container section h2 {
 	text-transform: uppercase;
 	letter-spacing: 6px;
+	font-size: 3em;
+	position: relative;
 }
 #bts-container section h2::before {
 	content: "";
-	color: #8c1627;
+	background-color: #8c1627;
+	position: absolute;
+	bottom: -2px;
 	width: 100%;
-	height: 2px;
+	height: 3px;
+	display: block;
 }
-#bts-description ul {
+.ul-menu {
 	width: 100%;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
 	align-items: center;
+	position: absolute;
+	top: 0;
+}
+.ul-menu li{
+list-style-type: none;
 }
 #bts-container #bts-sisr,
 #bts-container #bts-slam {
@@ -272,7 +333,7 @@ h1 {
 	justify-content: center;
 	gap: 50px;
 }
-#bts-description ul li a,
+.ul-menu li a,
 #bts-sisr ul li,
 #bts-slam ul li{
 	color: #e5e5c4;
@@ -280,7 +341,7 @@ h1 {
 	font-size: 18px;
 	font-weight: bold;
 	text-align: center;
-	line-height: 2em;
+	line-height: 1.5em;
 }
 #bts-slam ul li a{
 	color: #e5e5c4;
@@ -306,6 +367,7 @@ h1 {
 }
 #profil-container #profil-photo {
 	width: 100%;
+	height: 80vh;
 	border-radius: 15px;
 	overflow: hidden;
 	display: flex;
@@ -314,13 +376,15 @@ h1 {
 }
 #profil-container #profil-photo img {
 	width: 100%;
+	margin: auto;
 }
 #profil-container #profil-info {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 }
 #profil-container #profil-info ul li {
-	line-height: 3em;
+	line-height: 2em;
 	color: #e5e5c4;
 	font-size: 1em;
 	list-style-type: none;
@@ -334,7 +398,36 @@ h1 {
 	text-align: center;
 	font-size: 1.7em;
 }
-
+#profil-container #profil-card #profil-cv a{
+	position: relative;
+	color: #e5e5c4;
+	text-decoration: none;
+	padding: 20px 10px;
+	overflow: hidden;
+	border-radius: 5px;
+	transition: .3s all ease;
+	
+}
+#profil-container #profil-card #profil-cv a::before{
+	content: '';
+	z-index: -1;
+	background-color: #8c1627;
+	transform: rotate(45deg);
+	border-radius: 20px;
+	width: 0%;
+	height: 0%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform:translate(-50%, -50%);
+	transition: .3s all ease;
+	display: block;
+}
+#profil-container #profil-card #profil-cv a:hover::before{
+	content: '';
+	width: 100%;
+	height: 100%;
+}
 /* ************************************* */
 /* *            	  Footer	           * */
 /* ************************************* */
@@ -354,59 +447,6 @@ h1 {
 
 /* TODO ZONE MEDIA QUERIES */
 @media screen and (min-width: 480px) {
-	#profil-container{
-		width: 100%;
-		height: 100vh;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-	#profil-container .btn-up{
-		display: none;
-	}
-	#bts-container section{
-		width: 60%;
-	}
-	#profil-card{
-		width: 100%;
-		display: flex;
-		justify-content: space-around;
-		align-items: center;
-		flex-direction: row;
-	}
-	#profil-container #profil-photo {
-		width: 25%;
-	}
-	#profil-photo .scroll-down{
-		display: none;
-	}
-	#profil-container #profil-card #profil-cv a{
-		padding: 1em 1em;
-		border: 1px solid #8c1627;
-		overflow: hidden;
-		transition: .7s all ease;
-		position: relative;
-	}
-	#profil-container #profil-card #profil-cv a::before{
-		content: '';
-		z-index: -1;
-		background-color: #8c1627;
-		width: 100%;
-		height: 100%;
-		transform-origin: 0 0;
-		position: absolute;
-		left: 0;
-		top: 0;
-		transition: .6s all ease;
-		display: block;
-	}
-	#profil-container #profil-card #profil-cv a::before:hover{
-		content: '';
-		width: 100%;
-		height: 100%;
-	}
-}
-@media screen and (min-width: 768px) {
 	#aside-container {
 		z-index: 2;
 		position: fixed;
@@ -416,8 +456,52 @@ h1 {
 		width: 300px;
 		background-color: rgba(0, 0, 0, 0);
 		backdrop-filter: blur(8px);
-		/* transform: translateX(-500px); */
 		transition: 0.4s all;
+	}
+	#profil-container{
+		width: 100%;
+		height: 100vh;
+		padding: 4em;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.content-profil{
+		width: 70%;
+	}
+	#profil-card{
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+	#profil-container #profil-photo {
+		width: 30%;
+		display: flex;
+		align-items: center;
+	}
+	#profil-container #profil-photo img{
+		width: 100%;
+	}
+	#profil-container .btn-up{
+		display: none;
+	}
+	#bts-container section{
+		width: 60%;
+	}
+	.scroll-down{
+		display: none;
+	}
+	#bts-container{
+		align-items: center;
+		gap: 50px;
+	}
+}
+@media screen and (min-width: 768px) {
+	#bts-container{
+		align-items: center;
+		gap: 100px;
 	}
 }
 @media screen and (min-width: 1024px) {
