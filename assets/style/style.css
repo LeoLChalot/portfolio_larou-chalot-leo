@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap");
-
 *,
 ::before,
 ::after {
@@ -23,7 +22,6 @@ body {
 	background-color: black;
 	overflow-y: scroll;
 }
-
 main {
 	padding: 50px 30px;
 	min-height: 80vh;
@@ -31,12 +29,6 @@ main {
 p {
 	color: rgb(218, 218, 218);
 	font-size: 18px;
-}
-p::first-letter{
-	color: rgb(140, 22, 3);
-	font-size: 3em;
-	font-weight: bold;
-	font-family: cursive;
 }
 a,
 h1,
@@ -52,6 +44,15 @@ span {
 }
 h1 {
 	text-align: center;
+}
+/* ************************************* */
+/* *         Animation et Design       * */
+/* ************************************* */
+p::first-letter{
+	color: rgb(140, 22, 3);
+	font-size: 3em;
+	font-weight: bold;
+	font-family: cursive;
 }
 .copyright {
 	font-size: 0.6em;
@@ -444,7 +445,6 @@ list-style-type: none;
 	z-index: 3;
 	transform: rotate(0deg) scale(0.8);
 }
-
 /* TODO ZONE MEDIA QUERIES */
 @media screen and (min-width: 480px) {
 	#aside-container {
