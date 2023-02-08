@@ -21,9 +21,11 @@ body {
 }
 main{
 	padding: 50px 30px;
+	min-height: 100vh;
 }
 p{
-	color: white
+	color: white;
+	font-size: 18px;
 }
 a,
 h1,
@@ -185,7 +187,20 @@ h1{
 /* ************************************* */
 /* *            	   BTS               * */
 /* ************************************* */
-
+#bts-description{
+	height: 80vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+#bts-description p{
+	text-align: justify;
+	line-height: 2em;
+}
+/* #bts-description span .chevron-bottom{
+	transform: rotate(90deg)
+} */
 /* ************************************* */
 /* *            	  Footer	           * */
 /* ************************************* */
