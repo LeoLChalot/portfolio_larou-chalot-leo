@@ -320,7 +320,6 @@ p::first-letter {
 	width: 100%;
 	position: absolute;
 	left: 0;
-	top: 0;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
@@ -491,7 +490,7 @@ p::first-letter {
 }
 
 .flip-card-back {
-	border-radius: 30px;
+	border-radius: 5px;
 	background-color: #e5e5c4;
 	transform: rotateY(180deg);
 }
@@ -572,6 +571,15 @@ p::first-letter {
 	#bts-container {
 		align-items: center;
 		gap: 50px;
+	}
+	.flip-card{
+		height: 300px;
+	}
+	.flip-card-front{
+		height: 100%;
+	}
+	.projet-wrapper{
+		width: 50vw;
 	}
 }
 @media screen and (min-width: 768px) {
