@@ -474,10 +474,10 @@ p::first-letter {
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 }
-.flip-card-front img{
+.flip-card-front img {
 	width: 100%;
 }
-.flip-card-back{
+.flip-card-back {
 	height: 100%;
 	display: flex;
 	justify-content: center;
@@ -494,7 +494,7 @@ p::first-letter {
 	background-color: #e5e5c4;
 	transform: rotateY(180deg);
 }
-.flip-card-back a{
+.flip-card-back a {
 	font-size: 1.5em;
 	font-weight: bold;
 	color: #8c1627;
@@ -572,13 +572,13 @@ p::first-letter {
 		align-items: center;
 		gap: 50px;
 	}
-	.flip-card{
+	.flip-card {
 		height: 300px;
 	}
-	.flip-card-front{
+	.flip-card-front {
 		height: 100%;
 	}
-	.projet-wrapper{
+	.projet-wrapper {
 		width: 50vw;
 	}
 }
